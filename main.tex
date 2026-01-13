@@ -1,0 +1,112 @@
+\documentclass[compress]{beamer}
+%\mode<presentation>
+\usetheme{Madrid}
+%\usetheme{Boadilla}
+%\usetheme{AnnArbor}
+%\usetheme{CambridgeUS}
+\useoutertheme[footline=authortitle,subsection=false]{miniframes}
+\usecolortheme{lily}
+\setbeamerfont{normal text}{series=\mdseries}
+\setbeamerfont{item}{series=\mdseries}
+\setbeamerfont{itemize/enumerate body}{series=\mdseries}
+\setbeamerfont{itemize/enumerate subbody}{series=\mdseries}
+\usepackage{graphicx}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{booktabs}
+\newcommand{\mykeywords}{T and L presentation}
+
+%\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\setbeamercolor{section in toc}{fg=dark_blue}
+\setbeamercolor{itemize item}{fg=dark_blue}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{appendixnumberbeamer}
+\usepackage{babel,blindtext}
+%\usepackage{beamerthemesplit} % Activate for custom appearance
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{purple}{RGB}{128,100,162}
+\definecolor{dk_purple}{RGB}{96,75,120}
+\definecolor{maroon}{RGB}{149,55,53}
+\definecolor{lt_maroon}{RGB}{175,101,65}
+\definecolor{mute_blue}{RGB}{55,96,146}
+\definecolor{mute_green}{RGB}{79,130,40}
+\definecolor{dark_blue}{RGB}{32,64,97}
+\definecolor{lt_green}{RGB}{195, 214, 155}
+\definecolor{grey}{RGB}{125, 125, 125}
+\definecolor{green}{RGB}{0, 182, 0}
+\definecolor{blue}{RGB}{0, 0, 255}
+\definecolor{teal}{RGB}{0, 105,128}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{title}{fg=dark_blue}
+\setbeamercolor{frametitle}{fg=dark_blue}
+%\setbeamertemplate{footline}{}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.73\paperwidth,ht=2.5ex,dp=1ex,left]{title in head/foot}%
+      \usebeamerfont{title in head/foot}%
+      \mykeywords \hspace{1em}--\hspace{1em} \insertsubsectionhead
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+      \usebeamerfont{date in head/foot}%
+      \insertshortdate{}\hspace*{2ex}%
+      \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+\setbeamerfont{footnote}{series=\mdseries}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
+\usefonttheme{professionalfonts}
+\usepackage[style=authoryear, backend=bibtex]{biblatex}
+\addbibresource{oratory.bib} 
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
+\let\oldparencite\parencite
+\renewcommand{\parencite}[1]{{\mdseries\oldparencite{#1}}}
+
+\title{Oratory in Econ}
+\subtitle{2026 Teaching and Learning Conference}
+\author{
+	Malcolm Kass \& 
+	John Soriano \\
+	\vspace{0.5cm}
+    {\it University of Dallas} \\
+	\href{mailto:mkass@udallas.edu}{mkass@udallas.edu} \\
+    \href{mailto:jsoriano@udallas.edu}{jsoriano@udallas.edu} }
+    
+\date{\today}
+
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+
+\section{Introduction}
+\begin{frame} \frametitle{xxx}
+	\begin{itemize}
+		\item Possibility of Resort style Casino Gambling in Texas: \href{https://www.dallasnews.com/news/politics/2025/06/30/what-to-know-about-las-vegas-sands-the-casino-giant-betting-big-on-north-texas/}{\color{blue}Proposed Sands Casino in Irving, Texas}  
+        \item Proposed Irving location close to University of Dallas \begin{itemize}
+            \item Irving, TX: Pop: 260k, Inner-ring suburb
+            \item Lower Median Income for DFW (79k), but similar to the rest of Texas/US
+            \item Highly Diverse: Demographics and Income
+        \end{itemize}
+        \item Why Irving?
+        \begin{itemize}
+        \item First mover, but not a current destination area. 
+        \item Location is a self-contained, large empty plot: Little to no economic spillovers. Akin to a \textit{walled medieval European city }
+        \item[] \href{https://maps.app.goo.gl/6p2Zy9oHBkHnfjDT7}%
+{\beamergotobutton{Open Interactive Map}}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{document}
