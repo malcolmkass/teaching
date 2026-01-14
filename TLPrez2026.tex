@@ -15,8 +15,9 @@
 %\usepackage{subcaption}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{booktabs}
-\newcommand{\mykeywords}{T and L presentation}
+\newcommand{\mykeywords}{Student article presentations}
 
 %\usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \setbeamercolor{section in toc}{fg=dark_blue}
@@ -26,7 +27,9 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{appendixnumberbeamer}
-\usepackage{babel,blindtext}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+% \usepackage{blindtext} % only needed for filler text; safe to remove if unused
 %\usepackage{beamerthemesplit} % Activate for custom appearance
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{purple}{RGB}{128,100,162}
@@ -48,11 +51,11 @@
 \setbeamertemplate{footline}{%
   \leavevmode%
   \hbox{%
-    \begin{beamercolorbox}[wd=.73\paperwidth,ht=2.5ex,dp=1ex,left]{title in head/foot}%
+    \begin{beamercolorbox}[wd=.70\paperwidth,ht=2.5ex,dp=1ex,left]{title in head/foot}%
       \usebeamerfont{title in head/foot}%
       \mykeywords \hspace{1em}--\hspace{1em} \insertsubsectionhead
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+    \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
       \usebeamerfont{date in head/foot}%
       \insertshortdate{}\hspace*{2ex}%
       \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}%
@@ -70,10 +73,10 @@
 \let\oldparencite\parencite
 \renewcommand{\parencite}[1]{{\mdseries\oldparencite{#1}}}
 
-\title{Oratory in Econ}
-\subtitle{2026 Teaching and Learning Conference}
+\title{Student Presentations of Economic Journal Articles}
+\subtitle{Motivations, process, outcomes, lessons learned}
 \author{
-	Malcolm Kass \& 
+	Malcolm Kasf \& 
 	John Soriano \\
 	\vspace{0.5cm}
     {\it University of Dallas} \\
@@ -90,23 +93,184 @@
 	\end{frame}
 
 
-\section{Introduction}
-\begin{frame} \frametitle{xxx}
-	\begin{itemize}
-		\item Possibility of Resort style Casino Gambling in Texas: \href{https://www.dallasnews.com/news/politics/2025/06/30/what-to-know-about-las-vegas-sands-the-casino-giant-betting-big-on-north-texas/}{\color{blue}Proposed Sands Casino in Irving, Texas}  
-        \item Proposed Irving location close to University of Dallas \begin{itemize}
-            \item Irving, TX: Pop: 260k, Inner-ring suburb
-            \item Lower Median Income for DFW (79k), but similar to the rest of Texas/US
-            \item Highly Diverse: Demographics and Income
-        \end{itemize}
-        \item Why Irving?
-        \begin{itemize}
-        \item First mover, but not a current destination area. 
-        \item Location is a self-contained, large empty plot: Little to no economic spillovers. Akin to a \textit{walled medieval European city }
-        \item[] \href{https://maps.app.goo.gl/6p2Zy9oHBkHnfjDT7}%
-{\beamergotobutton{Open Interactive Map}}
-        \end{itemize}
-    \end{itemize}
+\section{Goal and context}
+
+\begin{frame}\frametitle{What we are trying to accomplish}
+\begin{itemize}
+  \item Build discipline-specific literacy: reading ``how economists argue'' in peer-reviewed work
+  \item Build transferable speaking skills: clear claims, evidence, and explanation for a live audience
+  \item Use student presentations to expand topic coverage without adding lecture time
+\end{itemize}
+\vspace{0.35cm}
+\small
+This talk uses materials from an ECO 4338 Public Finance syllabus and a Public Finance paper list/module, with the university's ``Art of Oratory'' emphasis as a guiding frame.
+\end{frame}
+
+\begin{frame}\frametitle{Why journal-article presentations (in econ, specifically)}
+\begin{itemize}
+  \item Economics is argument + method: theory, identification, assumptions, welfare criteria
+  \item Students need practice extracting ``the spine'' of a paper (what, why, how, so what)
+  \item Peer teaching creates repetition with variation: many papers, many presenters, shared vocabulary
+\end{itemize}
+\end{frame}
+
+\section{Motivations}
+\subsection{Oratory}
+
+\begin{frame}\frametitle{Institutional motivation: ``Art of Oratory''}
+\begin{itemize}
+  \item The presentation requirement is explicitly framed as part of the university's ``Art of Oratory'' goal
+  \item The aim is not ``more talking''; it is structured argument: claim $\rightarrow$ model/evidence $\rightarrow$ implications
+  \item Presentations also function as a public rehearsal of professional norms (clarity, citations, Q\&A)
+\end{itemize}
+\end{frame}
+
+\subsection{Course design}
+
+\begin{frame}\frametitle{Assignment at a glance (ECO 4338)}
+\begin{itemize}
+  \item Weight: Literature Review Presentations / Paper presentation = 8\% of course grade
+  \item Core prompt: present motivation, theoretical setup, and implications/results
+  \item Structure: students are organized into groups by theme (papers on a similar topic)
+  \item Instructor support: ``I will help you in this endeavor'' (coaching + scaffolding)
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{What ``present the paper'' means (a usable template)}
+\begin{enumerate}
+  \item Question: what is the economic problem and why does it matter?
+  \item Mechanism: model, key assumptions, or identification strategy
+  \item Result: main empirical/theoretical finding (ideally 1 figure/table)
+  \item Implications: welfare, policy, or ``what would change if we believe this?''
+  \item Limits: what the paper does \emph{not} show; external validity / missing margins
+\end{enumerate}
+\end{frame}
+
+\section{Process}
+\subsection{Choosing papers}
+
+\begin{frame}\frametitle{What students actually presented (Public Finance paper menu)}
+\begin{itemize}
+  \item Public choice: primer + JEP papers (via AEA links in the course module)
+  \item Externalities: ``clean air'' capitalization-style paper; sugar externalities (JEP)
+  \item Capital gains / unrealized gains: SSZZ, policy commentary, WSJ piece, supporting threads
+  \item Market vs.\ government failure \& Coase: institutional comparisons; Coase theorem (JEL/JEP-style)
+  \item Cost-benefit: overview + applied paper (e.g., dredging / project evaluation)
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Concrete examples (selected links from the course module)}
+\small
+\begin{itemize}
+  \item Public choice primer: \href{https://iea.org.uk/publications/research/public-choice-a-primer}{iea.org.uk/publications/research/public-choice-a-primer}
+  \item JEP on money in politics: \href{https://pubs.aeaweb.org/doi/pdfplus/10.1257/089533003321164976}{10.1257/089533003321164976}
+  \item Externalities (sugar): \href{https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.33.3.202}{10.1257/jep.33.3.202}
+  \item Unrealized capital gains debate: \href{https://zidar.princeton.edu/sites/g/files/toruqf3371/files/documents/sszz.pdf}{zidar.princeton.edu/.../sszz.pdf}
+  \item Coase theorem (JEL): \href{https://www.aeaweb.org/articles?id=10.1257/jel.20191060}{10.1257/jel.20191060}
+  \item Cost-benefit overview (JEP): \href{https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.12.4.133}{10.1257/jep.12.4.133}
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Scaffolding: students do not start from zero}
+\begin{itemize}
+  \item Curated links (paper lists + recommended primers) to reduce ``search costs''
+  \item Shared slide resources: topic-specific decks for key concepts (externalities, Coase, cap gains, etc.)
+  \item Group structure to pool skills (one student strong on theory, one on data, one on speaking)
+  \item Instructor checkpoints to reduce surprises late in the semester
+\end{itemize}
+\end{frame}
+
+\subsection{Timeline}
+
+\begin{frame}\frametitle{Timeline and checkpoints (example from syllabus)}
+\begin{itemize}
+  \item Late October: ``Tell me about your paper''
+  \item Early November: outline + sources for evaluation
+  \item Draft milestone: rough drafts due (example date listed in schedule)
+  \item Presentation window: scheduled paper presentations (example date listed in schedule)
+\end{itemize}
+\end{frame}
+
+\section{Assessment}
+\subsection{Rubric}
+
+\begin{frame}\frametitle{How I grade: separate \textit{content} from \textit{delivery}}
+\begin{itemize}
+  \item Content (econ): accurate mechanism, correct interpretation, appropriate welfare language
+  \item Evidence use: 1--2 central figures/tables; explain axes, magnitudes, and counterfactual
+  \item Narrative: a defensible thesis and a clear ``so what''
+  \item Delivery: pacing, slide design, and Q\&A handling
+\end{itemize}
+\vspace{0.25cm}
+\small
+The syllabus also includes an explicit paper rubric structure (e.g., thesis/intro, research quality, analysis, conclusion); those dimensions map cleanly into presentation grading.
+\end{frame}
+
+\begin{frame}\frametitle{A simple rubric faculty can reuse (one-slide version)}
+\begin{tabular}{p{0.28\linewidth} p{0.68\linewidth}}
+\toprule
+Category & What ``excellent'' looks like \\
+\midrule
+Motivation & Real-world stakes + economic question stated crisply \\
+Setup/ID & Correct assumptions or empirical strategy; no ``hand-waving'' \\
+Result & One main result explained with magnitudes and units \\
+Implications & Links result to policy/welfare tradeoffs (efficiency vs.\ equity) \\
+Communication & Slides readable; presenter guides audience; handles questions \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\section{Outcomes and lessons}
+\subsection{Outcomes}
+
+\begin{frame}\frametitle{Observed benefits (for students)}
+\begin{itemize}
+  \item Reading skill: students learn to identify the paper's ``spine'' quickly
+  \item Economic reasoning: practice translating models into predictions and welfare claims
+  \item Confidence: repeated exposure to public speaking in a coached setting
+  \item Peer learning: students see multiple applications across topics (externalities, public choice, taxation)
+\end{itemize}
+\end{frame}
+
+\subsection{Challenges}
+
+\begin{frame}\frametitle{Common challenges (and why they happen)}
+\begin{itemize}
+  \item Cognitive load: journal writing is dense; novices lose the main thread
+  \item Method anxiety: identification, assumptions, and causal language are easy to misstate
+  \item Uneven group contributions: ``division of labor'' can hide weak understanding
+  \item Time: presentations take class time; the course must budget for it
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Mitigations that helped}
+\begin{itemize}
+  \item Template-driven prep: required ``question--mechanism--result--implications'' structure
+  \item Checkpointing: early topic approval, outline + sources, draft milestone
+  \item Anchor visuals: require at least one key figure/table and explain it well
+  \item Light coaching: short meetings to correct misunderstandings before presenting
+\end{itemize}
+\end{frame}
+
+\subsection{Transferability}
+
+\begin{frame}\frametitle{How other disciplines can adapt this}
+\begin{itemize}
+  \item Start with curated readings (2--4 per topic) to reduce search frictions
+  \item Provide a one-page presentation template (claims, evidence, limitations)
+  \item Use structured peer feedback (two strengths + one question)
+  \item Grade process + product: checkpoints count, not just the final talk
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Closing}
+\begin{itemize}
+  \item Student article presentations can be a high-leverage teaching tool when scaffolded
+  \item They align well with an oratory-focused institutional mission
+  \item The main design problem is reducing cognitive load while keeping intellectual rigor
+\end{itemize}
+\vspace{0.5cm}
+\centerline{\Large Questions?}
 \end{frame}
 
 \end{document}
